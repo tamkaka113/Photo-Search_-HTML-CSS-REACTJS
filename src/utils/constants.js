@@ -1,8 +1,8 @@
-import React from 'react'
+
 import BannerOne from "../assets/banner-nd.jpg";
 import BannerSecond from "../assets/banner-st.jpg";
 import BannerThree from "../assets/banner-rd.jpg";
-import { GiCompass, GiDiamondHard, GiStabbedNote } from 'react-icons/gi'
+
 export const links = [
   {
     id: 1,
@@ -24,23 +24,23 @@ export const links = [
 export const homeBannersData = [
   {
     className: "banner-st",
-    title: "Enjoy your meal",
-    description: "Good food is wise",
-    strong: " medicine",
+    title: "Choose your best furnitures",
+    description: "Ready-made designs that leave our warehouse within 2 business days.",
+    strong: " Furnitures",
     background: BannerOne,
   },
   {
     className: "banner-nd",
-    title: "Happy your special",
-    description: "Love at first",
-    strong: " bite",
+    title: "New Arrivals",
+    description: "View our latest products. Shop our new designs today.",
+    strong: " Create a home you love",
     background: BannerSecond,
   },
   {
     className: "banner-rd",
-    title: "Good food is good mood",
-    description: "The belly rules the",
-    strong: " mind",
+    title: "Quick Shop",
+    description: "Find everything you need to outfit your home",
+    strong: "Homewares",
     background: BannerThree,
   },
 ];
@@ -48,22 +48,22 @@ export const homeBannersData = [
 export const reviews = [
   {
     id: 1,
-    icon: <GiCompass />,
-    title: 'mission',
+    img: 'https://static.onecms.io/wp-content/uploads/sites/6/2017/03/gettyimages-499362720-2000.jpg',
+    name: 'Adam Sandler ',
     text:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
   },
   {
     id: 2,
-    icon: <GiDiamondHard />,
-    title: 'vision',
+    img: 'https://static.wikia.nocookie.net/disney/images/d/d8/Jennifer_Lawrence.jpg',
+    name: 'Jenifer Lawrence',
     text:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
   },
   {
     id: 3,
-    icon: <GiStabbedNote />,
-    title: 'history',
+    img: 'https://assets.popbuzz.com/2021/19/who-is-matt-cornett-1620904012-view-0.jpg',
+    name: 'Matt Corner',
     text:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
   },

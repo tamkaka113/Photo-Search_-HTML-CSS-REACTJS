@@ -12,8 +12,8 @@ const HomeBanner = (data) => {
       <article className="content">
         <h1>{title}</h1>
 
-        <p>{strong}</p>
-        <p>
+        <p className="strong">{strong}</p>
+        <p className="description">
          {description}
         </p>
         <Link to="/products" className="btn hero-btn">
@@ -39,7 +39,27 @@ const Wrapper = styled.section`
 
     }
 
+   h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color:var(--clr-white)
+   }
 
-  
+   .description {
+    font-size: 1.6rem;
+    font-weight: 600;
+ 
+    color:var( --clr-primary-5);
+    
+
+   }
+  .strong {
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    color:var( --clr-grey-4)
+
+  }
 `;
 export default HomeBanner;

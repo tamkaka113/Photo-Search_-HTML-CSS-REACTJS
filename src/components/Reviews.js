@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { reviews } from '../utils/constants'
 
-const Services = () => {
+const Reviews = () => {
   return (
     <Wrapper>
       <div className='section-center'>
@@ -12,11 +12,11 @@ const Services = () => {
       </div>
         <div className='services-center'>
           {reviews.map((service) => {
-            const { id, icon, title, text } = service
+            const { id, img, name, text } = service
             return (
               <article key={id} className='service'>
-                <span className='icon'>{icon} </span>
-                <h4>{title}</h4>
+                <img className='img-avatar' src = {img} alt ={name}/>
+                <h4>{name}</h4>
                 <p>{text}</p>
               </article>
             )
@@ -57,6 +57,14 @@ const Wrapper = styled.section`
     border-radius: var(--radius);
     p {
       color: var(--clr-primary-2);
+
+    }
+    img{
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      object-fit:cover;
+
     }
   }
   span {
@@ -91,4 +99,4 @@ const Wrapper = styled.section`
     }
   }
 `
-export default Services
+export default Reviews

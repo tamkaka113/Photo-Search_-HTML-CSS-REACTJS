@@ -6,16 +6,16 @@ import HomeBanner from "./Homebanner";
 const Hero = () => {
 
   const [slideNum, setSlideNum] = useState(0);
-  useEffect(() => {
+ /*  useEffect(() => {
     setTimeout(() => {
       if (slideNum < homeBannersData.length - 1) {
         setSlideNum(slideNum + 1);
       } else {
         setSlideNum(0);
       }
-    }, 5000);
+    }, 7000);
 
-  },[slideNum]);
+  },[slideNum]); */
 
   const moveDot = (idx) => {
     setSlideNum(idx);
