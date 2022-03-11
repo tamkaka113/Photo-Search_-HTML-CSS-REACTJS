@@ -35,8 +35,7 @@ const Nav = () => {
           <Link to="/">
             <div className="nav-container " >
 
-            <img src={logo} alt="comfy store" />
-            <h2> iComfy </h2>
+            <h2> iStore</h2>
             </div>
           </Link>
           <button type="button" className="nav-toggle" onClick={openSidebar}>

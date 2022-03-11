@@ -17,7 +17,6 @@ export const UserProvider = ({ children }) => {
     </UserContext.Provider>
   )
 }
-// make sure use
 export const useUserContext = () => {
   return useContext(UserContext)
 }

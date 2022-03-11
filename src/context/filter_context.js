@@ -58,7 +58,6 @@ export const FilterProvider = ({ children }) => {
     let name = e.target.name
     let value = e.target.value
 
-    console.log(value)
     if (name === 'price') {
       value = Number(value)
     }
