@@ -1,17 +1,24 @@
-## Notes
+## Features
 
-#### Older React Version
+- Login, Register
+- Full featured shopping cart
+- Top products carousel
+- Product search feature
+- Checkout process (shipping, payment method, etc)
+- credit card integration
+- Database seeder (products & users)
 
-```
-"react": "^16.13.1",
-"react-dom": "^16.13.1",
-"react-scripts": "3.4.3",
-```
+## Env Variables
 
-#### Current React Version
+- REACT_APP_AUTH_DOMAIN= Auth0 Domain
+- REACT_APP_AUTH_CLIENT_ID= Auth0 secret Client Id
+- REACT_APP_STRIPE_PUBLIC_KEY= Stripe Public Key
+- REACT_APP_STRIPE_SECRET_KEY= Stripe Secret Key
 
-```
-"react": "^17.0.1",
-"react-dom": "^17.0.1",
-"react-scripts": "4.0.0",
-```
+## Install Dependencies
+
+npm install
+
+## Run
+
+npm run start
