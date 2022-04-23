@@ -31,7 +31,7 @@ const Wrapper = styled.section`
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
-\
+
     .content {
         position: absolute;
         bottom:40px;
