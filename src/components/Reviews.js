@@ -1,44 +1,41 @@
-import React from 'react'
-import styled from 'styled-components'
-import { reviews } from '../utils/constants'
+import React from "react";
+import styled from "styled-components";
+import { reviews } from "../utils/constants";
 
 const Reviews = () => {
   return (
     <Wrapper>
-      <div className='section-center'>
-      <div className='title'>
-        <h2>Customer Reviews</h2>
-        <div className='underline'></div>
-      </div>
-        <div className='services-center'>
+      <div className="section-center">
+        <div className="title">
+          <h2>Customer Reviews</h2>
+          <div className="underline"></div>
+        </div>
+        <div className="services-center">
           {reviews.map((service) => {
-            const { id, img, name, text } = service
+            const { id, img, name, text } = service;
             return (
-              <article key={id} className='service'>
-                <img className='img-avatar' src = {img} alt ={name}/>
+              <article key={id} className="service">
+                <img className="img-avatar" src={img} alt={name} />
                 <h4>{name}</h4>
                 <p>{text}</p>
               </article>
-            )
+            );
           })}
         </div>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
- 
-  
   h4 {
     color: var(--clr-primary-1);
   }
   padding: 5rem 0;
-   background: var(--clr-primary-10);
- 
+  background: var(--clr-primary-10);
+
   .header h2 {
     margin-bottom: 2rem;
-    
   }
   p {
     margin-bottom: 0;
@@ -57,14 +54,12 @@ const Wrapper = styled.section`
     border-radius: var(--radius);
     p {
       color: var(--clr-primary-2);
-
     }
-    img{
-      width:60px;
-      height:60px;
-      border-radius:50%;
-      object-fit:cover;
-
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
     }
   }
   span {
@@ -98,5 +93,5 @@ const Wrapper = styled.section`
       transform: translateY(5rem);
     }
   }
-`
-export default Reviews
+`;
+export default Reviews;

@@ -33,9 +33,8 @@ const Nav = () => {
       <div className={header ? "nav-center active" : "nav-center"}>
         <div className="nav-header ">
           <Link to="/">
-            <div className="nav-container " >
-
-            <h2> iStore</h2>
+            <div className="nav-container ">
+              <h2> iStore</h2>
             </div>
           </Link>
           <button type="button" className="nav-toggle" onClick={openSidebar}>

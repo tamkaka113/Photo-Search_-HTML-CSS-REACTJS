@@ -1,74 +1,71 @@
-import React, {useState} from 'react'
-import { FaShoppingCart, FaUserMinus, FaUserPlus } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import { useProductsContext } from '../context/products_context'
-import { useCartContext } from '../context/cart_context'
-import { useUserContext } from '../context/user_context'
+import React, { useState } from "react";
+import { FaShoppingCart, FaUserMinus, FaUserPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { useProductsContext } from "../context/products_context";
+import { useCartContext } from "../context/cart_context";
+import { useUserContext } from "../context/user_context";
 
 const CartButtons = () => {
+  const [isShow, setIsShow] = useState(false);
+  const { closeSidebar } = useProductsContext();
+  const { total_items, clearCart } = useCartContext();
+  const { loginWithRedirect, myUser, logout } = useUserContext();
 
+  const { email, family_name, picture } = myUser ? myUser : "";
 
-  const[isShow, setIsShow] = useState(false)
-  const { closeSidebar } = useProductsContext()
-  const { total_items, clearCart } = useCartContext()
-  const { loginWithRedirect, myUser, logout } = useUserContext()
-
- const {email, family_name, picture} = myUser? myUser:''
-
- const nickName =  email?.substring(0, email.lastIndexOf("@"))
-  const handleShow =() => {
-    setIsShow(!isShow)
-  }
+  const nickName = email?.substring(0, email.lastIndexOf("@"));
+  const handleShow = () => {
+    setIsShow(!isShow);
+  };
   return (
-    <Wrapper className='cart-btn-wrapper'>
-      <Link to='/cart' className='cart-btn' onClick={closeSidebar}>
+    <Wrapper className="cart-btn-wrapper">
+      <Link to="/cart" className="cart-btn" onClick={closeSidebar}>
         Cart
-        <span className='cart-container'>
+        <span className="cart-container">
           <FaShoppingCart />
-          <span className='cart-value'>{total_items}</span>
+          <span className="cart-value">{total_items}</span>
         </span>
       </Link>
       {myUser ? (
         <>
-        <div className='user-container' onClick={()=> {handleShow()}} >
-          <p>{family_name||nickName}</p>
-        <img className='user-photo' src={picture||''} alt=''/>
-    
-        </div>
-         <ul className={isShow?'user-account active':'user-account'}>
-            <li className='user-account-option'>
-            
-              <span>My account</span>{' '}
+          <div
+            className="user-container"
+            onClick={() => {
+              handleShow();
+            }}
+          >
+            <p>{family_name || nickName}</p>
+            <img className="user-photo" src={picture || ""} alt="" />
+          </div>
+          <ul className={isShow ? "user-account active" : "user-account"}>
+            <li className="user-account-option">
+              <span>My account</span>{" "}
             </li>
-            <li
-           
-              className='user-account-option'>
-           
-              <span>My wishlist</span>{' '}
+            <li className="user-account-option">
+              <span>My wishlist</span>{" "}
             </li>
-            <li
-              className='user-account-option'>
-          
-              <span 
-               onClick={() => {
-                 clearCart()
-                 localStorage.removeItem('user')
-                 logout()
-               }}>Logout</span>
+            <li className="user-account-option">
+              <span
+                onClick={() => {
+                  clearCart();
+                  localStorage.removeItem("user");
+                  logout();
+                }}
+              >
+                Logout
+              </span>
             </li>
-          </ul> 
+          </ul>
         </>
-        
-
       ) : (
-        <button type='button' className='auth-btn' onClick={loginWithRedirect}>
+        <button type="button" className="auth-btn" onClick={loginWithRedirect}>
           Login <FaUserPlus />
         </button>
       )}
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.div`
   display: grid;
@@ -198,5 +195,5 @@ const Wrapper = styled.div`
   
 
  
-`
-export default CartButtons
+`;
+export default CartButtons;
